@@ -1,0 +1,6 @@
+C:\Users\Mark\Documents\Visual Studio 2013\Practice\Blackjack\Blackjack\bin\Debug\Blackjack.exe.config
+C:\Users\Mark\Documents\Visual Studio 2013\Practice\Blackjack\Blackjack\obj\Debug\Blackjack.csprojResolveAssemblyReference.cache
+C:\Users\Mark\Documents\Visual Studio 2013\Practice\Blackjack\Blackjack\bin\Debug\Blackjack.exe
+C:\Users\Mark\Documents\Visual Studio 2013\Practice\Blackjack\Blackjack\bin\Debug\Blackjack.pdb
+C:\Users\Mark\Documents\Visual Studio 2013\Practice\Blackjack\Blackjack\obj\Debug\Blackjack.exe
+C:\Users\Mark\Documents\Visual Studio 2013\Practice\Blackjack\Blackjack\obj\Debug\Blackjack.pdb
