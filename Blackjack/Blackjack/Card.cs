@@ -8,6 +8,14 @@ namespace Blackjack
 {
     class Card
     {
+        enum faceCard
+        {
+            Ace,
+            King,
+            Queen,
+            Jack
+        };
+
         //0 club, 1 spade, 2 heart, 3 diamonds
         private int suit { get; set; }
         private int value { get; set; }
@@ -20,8 +28,27 @@ namespace Blackjack
 
         public void print()
         {
+            if(value > 10)
+            {
+                switch(value)
+                {
+                    case 14:
+                        Console.Write(faceCard.Ace + " of ");
+                        break;
+                    case 13:
+                        Console.Write(faceCard.King + " of ");
+                        break;
+                    case 12:
+                        Console.Write(faceCard.Queen + " of ");
+                        break;
+                    case 11:
+                        Console.Write(faceCard.Jack + " of ");
+                        break;
+                }
+            }
+            else
             Console.Write(value + " of ");
-
+            
             switch (suit)
             {
                 case 1:
