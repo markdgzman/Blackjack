@@ -29,12 +29,52 @@ namespace Blackjack
             
         }
 
+        public void getSize()
+        {
+            Console.WriteLine(cardDeck.Count() + " Cards in the deck");
+        }
+
         public void toString()
         {
             foreach(Card a in cardDeck)
             {
                 a.print();
             }
+        }
+
+        public void deal()
+        {
+            Card a = cardDeck[0];
+            cardDeck.RemoveAt(0);
+            a.print();
+        }
+
+        public void cut()
+        {
+            cardDeck.RemoveRange(0, 10);
+        }
+
+        public void showCard(Card a)
+        {
+            a.print();
+        }
+
+        public void shuffle()
+        {
+            Random rndmCard = new Random();
+
+            for(int i = 0; i < cardDeck.Count; i++)
+            {
+
+                Card swapCard;
+                int random = rndmCard.Next(cardDeck.Count);
+
+                Console.WriteLine(random);
+                swapCard = cardDeck[i];
+                cardDeck[random] = cardDeck[i];
+                cardDeck[i] = swapCard;
+            }
+
         }
     }
 }
