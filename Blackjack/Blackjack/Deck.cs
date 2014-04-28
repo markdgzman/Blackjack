@@ -15,6 +15,7 @@ namespace Blackjack
 
         //Create list data structure to hold the cards
         List<Card> cardDeck = new List <Card>();
+        List<Card> discard = new List<Card>();
             
         public void createDeck()
         {
@@ -42,9 +43,18 @@ namespace Blackjack
             }
         }
 
+        public void showDiscard()
+        {
+            foreach(Card a in discard)
+            {
+                a.print();
+            }
+        }
+
         public void deal()
         {
             Card a = cardDeck[0];
+            discard.Add(a);
             cardDeck.RemoveAt(0);
             a.print();
         }
@@ -59,20 +69,26 @@ namespace Blackjack
             a.print();
         }
 
+        
+
         public void shuffle()
         {
             Random rndmCard = new Random();
 
             for(int i = 0; i < cardDeck.Count; i++)
             {
+                for (int j = 0; j < 3; j++)
+                {
+                    Card swapCard;
+                    int random = rndmCard.Next(cardDeck.Count);
 
-                Card swapCard;
-                int random = rndmCard.Next(cardDeck.Count);
-
-                Console.WriteLine(random);
-                swapCard = cardDeck[i];
-                cardDeck[random] = cardDeck[i];
-                cardDeck[i] = swapCard;
+                    //assign temp card to the card at index i
+                    swapCard = cardDeck[i];
+                    //assign card at index to the value of the random card
+                    cardDeck[i] = cardDeck[random];
+                    //assign initial card at index to the random slot
+                    cardDeck[random] = swapCard;
+                }
             }
 
         }

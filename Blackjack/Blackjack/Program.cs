@@ -11,15 +11,8 @@ namespace Blackjack
         static void Main(string[] args)
         {
             Deck black = new Deck();
-
             black.createDeck();
-            black.toString();
-            black.getSize();
 
-            black.shuffle();
-            black.toString();
-            Console.WriteLine();
-            Console.WriteLine();
 
             String sentinel = " ";
             Console.WriteLine("Blackjack!");
@@ -29,17 +22,28 @@ namespace Blackjack
             {
                 Console.Write("Enter Command:");
                 sentinel = Console.ReadLine();
-                if (sentinel == "shuffle")
-                    black.shuffle();
-                else if (sentinel == "show")
-                    black.toString();
-                else if (sentinel == "size")
-                    black.getSize();
-                else if (sentinel == "hit")
-                    black.deal();
-                else if (sentinel == "cut")
-                    black.cut();
-                
+
+                switch(sentinel)
+                {
+                    case "discard":
+                        black.showDiscard();
+                        break;
+                    case "shuffle":
+                        black.shuffle();
+                        break;
+                    case "show":
+                        black.toString();
+                        break;
+                    case "size":
+                        black.getSize();
+                        break;
+                    case "hit":
+                        black.deal();
+                        break;
+                    case "cut":
+                        black.cut();
+                        break;
+                }
             }
 
 
