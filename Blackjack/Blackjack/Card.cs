@@ -26,6 +26,11 @@ namespace Blackjack
             value = v;
         }
 
+        public int getValue()
+        {
+            return value;
+        }
+
         public void print()
         {
             if(value > 10)

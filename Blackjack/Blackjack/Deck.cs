@@ -51,14 +51,16 @@ namespace Blackjack
             }
         }
 
-        public void deal()
+        public int deal()
         {
             Card a = cardDeck[0];
             discard.Add(a);
             cardDeck.RemoveAt(0);
             a.print();
+            return a.getValue();
         }
 
+        //Add 10 to discard pile
         public void cut()
         {
             cardDeck.RemoveRange(0, 10);
@@ -70,7 +72,7 @@ namespace Blackjack
         }
 
         
-
+        //Fisher Yates algorithm for shuffling
         public void shuffle()
         {
             Random rndmCard = new Random();
